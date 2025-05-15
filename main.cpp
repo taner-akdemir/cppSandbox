@@ -6,8 +6,8 @@ using namespace std;
 
 // Generics - template metot
 
-template <typename T>
-T add(T a, T b) {
+template <typename T, typename U>
+T add(T a, U b) {
     return a + b;
 }
 

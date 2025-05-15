@@ -110,8 +110,8 @@ float Bank::getBalance() const {
 
 
 int Bank::generateNumber(const int startNumber, const int endNumber) {
-    random_device seed;
-    mt19937 gen{seed()};
+    random_device rd;
+    mt19937 gen{rd()};
     uniform_int_distribution<int> dist{startNumber, endNumber};
     return dist(gen);
 }
