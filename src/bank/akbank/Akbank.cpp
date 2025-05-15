@@ -33,9 +33,11 @@ Akbank::~Akbank() {
 
 
 void Akbank::withDraw(const float amount) {
+    cout << "withdraw akbank" << accountNumber << endl;
     balance -= amount;
 }
 
 void Akbank::addDeposit(const float amount) {
+    cout << "addDeposit akbank" << accountNumber << endl;
     balance += amount;
 }

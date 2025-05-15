@@ -43,10 +43,12 @@ Bank::Bank(
 }
 
 void Bank::withDraw(const float amount) {
+    cout << "withdraw bank" << accountNumber << endl;
     balance -= amount;
 }
 
 void Bank::addDeposit(const float amount) {
+    cout << "addDeposit bank" << accountNumber << endl;
     balance += amount;
 }
 
@@ -107,10 +109,11 @@ float Bank::getBalance() const {
 
 
 
-
-
 int Bank::generateNumber(const int startNumber, const int endNumber) {
-    return 1000;
+    random_device seed;
+    mt19937 gen{seed()};
+    uniform_int_distribution<int> dist{startNumber, endNumber};
+    return dist(gen);
 }
 
 int Bank::generateCVV() {
