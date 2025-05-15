@@ -22,7 +22,7 @@ public:
         const string &_country
     );
 
-    ~Bank();
+    virtual ~Bank();
 
     string getName();
     string getLastName();
